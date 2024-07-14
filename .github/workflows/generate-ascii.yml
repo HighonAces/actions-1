@@ -8,6 +8,9 @@ jobs:
         steps:
         - name: Checkout Repo
           uses: actions/checkout@v4
+        
+        - name: Update and Upgrade
+          uses: sudo apt-get update && sudo apt-get upgrade
 
         - name: Install Cowsay program
           run: sudo apt-get install cowsay -y 
