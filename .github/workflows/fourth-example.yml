@@ -1,0 +1,16 @@
+name: My fourth Workflow
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: self-hosted-linux
+        steps:
+        - name: Checkout Repo1
+          uses: actions/checkout@v4
+
+        - name: List and Read files
+          run: |
+            echo "My first Github Actions Job"
+            ls -ltra
+            cat README.md
